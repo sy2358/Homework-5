@@ -28,7 +28,7 @@ for w in words_1:
   idx, embedding = getEmbedding(w)
   # calculate cosine distance to all other idx and sort by distance
   cosine_dist=sorted([(cosine(embedding, embedding_mat[j]), j) for j in range(len(ptb_wtoi)) if not j == idx])
-  # display the top 5 closest - exclude the first one which is the word itself
+  # display the top 5 closest
   print(w,'==>',[ptb_wtoi[j] for d,j in cosine_dist[0:5]])
 
 print()

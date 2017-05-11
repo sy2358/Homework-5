@@ -1,0 +1,13 @@
+- loading embedding...
+- loading word to index
+1) nearest words (displaying 5 nearest)
+the ==> ['two-part', 'a', 'calif.-based', 'london-based', 'massive']
+discount ==> ['emergency', 'mortgage', 'investment', 'start-up', 'interest']
+crazy ==> ['falconbridge', 'kidder', 'wrong', 'unwarranted', 'municipals']
+birthday ==> ['moreover', 'mess', 'tomorrow', 'afterward', 'region']
+just ==> ['only', 'nearly', 'usually', 'surely', 'least']
+
+2) word vector calculation (displaying 5 nearest)
+king-male+female ==> ['leaseway', 'firm', 'nathan', 'shipyard', 'fool']
+breakfast-morning+evening ==> ['specialize', 'shifts', 'jobless', 'specializing', 'realty']
+japan-tokyo+london ==> ['italy', 'france', 'china', 'britain', 'australia']

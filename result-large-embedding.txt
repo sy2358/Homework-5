@@ -1,0 +1,13 @@
+- loading embedding...
+- loading word to index
+1) nearest words (displaying 5 nearest)
+the ==> ['of', 'which', 'in', 'and', 'a']
+discount ==> ['discounts', 'discounted', 'discounting', 'coupons', 'purchases']
+crazy ==> ['stupid', 'weird', 'guy', 'stuff', 'kid']
+birthday ==> ['anniversary', 'celebrating', 'celebration', 'centennial', 'dinner']
+just ==> ['going', 'away', 'what', 'stretch', 'way']
+
+2) word vector calculation (displaying 5 nearest)
+king-male+female ==> ['kingdom', 'prince', 'queen', 'royal', 'lord']
+breakfast-morning+evening ==> ['dinner', 'meals', 'buffet', 'cooking', 'biscuits']
+japan-tokyo+london ==> ['bradford', 'johnson', 'phillips', 'birmingham', 'wellington']

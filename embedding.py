@@ -1,19 +1,26 @@
-import tensorflow as tf
 import numpy as np
 from scipy.spatial.distance import cosine
+import sys
 
+# if setting 'large' in commandline, use word embedding trained on very large corpus
+embedding = ['parameters/embedding.npy', 'ptb_word_to_id.txt']
+if len(sys.argv)>1 and sys.argv[1]=='large':
+  embedding = ['parameters/embedding-large.npy', 'large_word_to_id.txt']
+
+# returns index and embedding
 def getEmbedding(word):
-  idx = np.where(ptb_wtoi == word)[0][0]
-  return idx, embedding_mat[idx]
+  idx = np.where(ptb_wtoi == word)[0]
+  if len(idx) == 0:
+    idx = np.where(ptb_wtoi == "<unk>")[0]
+  return idx[0], embedding_mat[idx[0]]
 
 print('- loading embedding...')
-embedding_mat = np.load('parameters/embedding.npy')
+embedding_mat = np.load(embedding[0])
 
-# [word]
 print('- loading word to index')
-ptb_wtoi = np.loadtxt('ptb_word_to_id.txt',delimiter='\t',comments = '###',usecols = 0, dtype=bytes).astype(str)
+ptb_wtoi = np.loadtxt(embedding[1],delimiter='\t',comments = '###',usecols = 0, dtype=bytes).astype(str)
 
-words_1 = ['the','discount','crazy','birthday','just']
+words_1 = ['the', 'discount', 'crazy', 'birthday', 'just']
 
 print('1) nearest words (displaying 5 nearest)')
 
@@ -29,7 +36,7 @@ print('2) word vector calculation (displaying 5 nearest)')
 
 analogy = [['king', 'male', 'female'],
            ['breakfast', 'morning', 'evening'],
-           ['japan','tokyo','paris']]
+           ['japan','tokyo','london']]
 
 for ana in analogy:
   idxa, embeddinga = getEmbedding(ana[0])

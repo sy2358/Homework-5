@@ -1,0 +1,32 @@
+- loading embedding...
+- loading word to index
+- loading LSTM parameters...
+- loading softmax parameters...
+- calculate probability on test ...
+['i', 'have', 'a', 'cat', 'in', 'my', 'home', '<eos>'] -38.43187438357973
+['i', 'have', 'a', 'cat', 'in', 'my', 'house', '<eos>'] -38.83751606467651
+['i', 'have', 'a', 'cat', 'in', 'me', 'home', '<eos>'] -46.432816006210395
+- greedy generation:
+generated:  ['some', 'of', 'the', 'N', 'N', 'of', 'the', 'company', "'s", 'assets', '<eos>']
+generated:  ['where', 'the', 'company', 'has', 'been', 'able', 'to', 'sell', 'the', 'company', "'s", 'assets', '<eos>']
+- beam search generation (2):
+generated:  ['some', 'of', 'the', 'N', 'N', 'of', 'the', 'company', "'s", 'assets', '<eos>']
+generated:  ['some', 'N', 'N', 'of', 'the', 'total', 'N', 'N', 'of', 'the', 'total', 'N', 'N', 'of', 'the', 'total', 'market', 'value', '<eos>']
+generated:  ['where', 'it', 'is', "n't", 'a', 'problem', '<eos>']
+generated:  ['where', 'the', 'company', 'has', 'been', 'able', 'to', 'sell', 'the', 'company', "'s", 'assets', '<eos>']
+- beam search generation (3):
+generated:  ['some', 'other', 'major', 'players', 'in', 'the', 'u.s.', '<eos>']
+generated:  ['some', 'other', 'major', 'players', 'in', 'the', 'u.s.', 'and', 'europe', '<eos>']
+generated:  ['some', 'N', 'N', 'of', 'the', 'total', 'N', 'N', 'of', 'the', 'total', 'N', 'N', 'of', 'the', 'total', 'market', 'value', '<eos>']
+generated:  ['where', 'it', 'is', "n't", 'a', 'problem', '<eos>']
+generated:  ['where', 'the', 'company', 'has', 'been', 'able', 'to', 'sell', 'the', 'company', '<eos>']
+generated:  ['where', 'the', 'company', 'has', 'been', 'able', 'to', 'sell', 'the', 'company', "'s", 'assets', '<eos>']
+- beam search generation (4):
+generated:  ['some', 'analysts', 'say', '<eos>']
+generated:  ['some', 'other', 'major', 'players', 'in', 'the', 'u.s.', '<eos>']
+generated:  ['some', 'other', 'major', 'players', 'in', 'the', 'u.s.', 'and', 'europe', '<eos>']
+generated:  ['some', 'N', 'N', 'of', 'the', 'total', 'N', 'N', 'of', 'the', 'total', 'N', 'N', 'of', 'the', 'total', 'market', 'value', '<eos>']
+generated:  ['where', 'it', 'is', "n't", 'a', 'problem', '<eos>']
+generated:  ['where', 'the', 'company', 'has', 'been', 'able', 'to', 'sell', 'the', 'company', '<eos>']
+generated:  ['where', 'the', 'company', 'has', 'been', 'able', 'to', 'sell', 'the', 'company', "'s", 'assets', '<eos>']
+generated:  ['where', 'it', 'was', "n't", 'the', 'only', 'way', 'to', 'be', 'the', 'first', 'to', 'be', 'sold', '<eos>']

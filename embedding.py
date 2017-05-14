@@ -29,7 +29,8 @@ words_1 = ['the', 'discount', 'crazy', 'birthday', 'just']
 print('1) nearest words (displaying 5 nearest)')
 
 for w in words_1:
-  idx, embedding = getEmbedding(getWordIdx(w))
+  idx = getWordIdx(w)
+  embedding = getEmbedding(idx)
   # calculate cosine distance to all other idx and sort by distance
   cosine_dist=sorted([(cosine(embedding, embedding_mat[j]), j) for j in range(len(ptb_wtoi)) if not j == idx])
   # display the top 5 closest
@@ -43,9 +44,12 @@ analogy = [['king', 'male', 'female'],
            ['japan','tokyo','london']]
 
 for ana in analogy:
-  idxa, embeddinga = getEmbedding(getWordIdx(ana[0]))
-  idxb, embeddingb = getEmbedding(getWordIdx(ana[1]))
-  idxc, embeddingc = getEmbedding(getWordIdx(ana[2]))
+  idxa = getWordIdx(ana[0])
+  embeddinga = getEmbedding(idxa)
+  idxb = getWordIdx(ana[1])
+  embeddingb = getEmbedding(idxb)
+  idxc = getWordIdx(ana[2])
+  embeddingc = getEmbedding(idxc)
   embedding = embeddinga-embeddingb+embeddingc
 
   # calculate cosine distance to all other idx and sort by distance

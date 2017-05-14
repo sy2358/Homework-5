@@ -189,7 +189,7 @@ softmax_w = np.load('parameters/softmax_w.npy')
 print('- calculate probability on test ...')
 probability(0.00135759, ['i', 'have', 'a', 'cat', 'in', 'my', 'home', '<eos>'])
 probability(0.00135759, ['i', 'have', 'a', 'cat', 'in', 'my', 'house', '<eos>'])
-probability(0.00135759, ['i', 'have', 'a', 'cat', 'in', 'me', 'home', '<eos>'])
+probability(0.00135759, ['i', 'have', 'a', 'cat', 'in', 'me', 'house', '<eos>'])
 
 print('- greedy generation:')
 greedy('some')

@@ -197,12 +197,12 @@ greedy('where')
 
 print('- beam search generation (2):')
 beam('some', 0.00179434, 2)
-beam('where', 0.00179434, 2)
+beam('where', 0.000415237, 2)
 
 print('- beam search generation (3):')
-beam('some', 0.000415237, 3)
+beam('some', 0.00179434, 3)
 beam('where', 0.000415237, 3)
 
 print('- beam search generation (4):')
-beam('some', 0.000415237, 4)
+beam('some', 0.00179434, 4)
 beam('where', 0.000415237, 4)
